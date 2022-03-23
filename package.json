@@ -9,10 +9,14 @@
   "author": "Rahman Fadhil (https://rahmanfadhil.com/)",
   "license": "MIT",
   "dependencies": {
-    "apollo-server": "^3.5.0",
+    "@types/express": "^4.17.13",
+    "apollo-server-express": "^3.6.5",
+    "express": "^4.17.3",
+    "graphql": "^15.3.0",
+    "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
-    "sqlite3": "^5.0.2",
     "type-graphql": "^1.1.1",
+    "type-graphql-dataloader": "^0.5.0",
     "typeorm": "^0.2.41"
   },
   "devDependencies": {

@@ -1,6 +1,12 @@
 {
-  "type": "sqlite",
-  "database": "./db.sqlite3",
-  "entities": ["./src/models/*.ts"],
-  "synchronize": true
+    "type": "postgres",
+    "schema": "public",
+    "host": "localhost",
+    "username": "postgres",
+    "password": "postgres",
+    "database": "graphqlDB",
+    "port": 5432,
+    "synchronize": true,
+    "logging": true,
+    "entities": ["src/models/*.ts"]
 }

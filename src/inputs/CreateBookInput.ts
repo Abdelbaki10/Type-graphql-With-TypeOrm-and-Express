@@ -7,4 +7,7 @@ export class CreateBookInput {
 
   @Field()
   author: string;
+
+  @Field()
+  orderById: string;
 }

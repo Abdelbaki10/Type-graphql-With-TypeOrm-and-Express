@@ -1,8 +1,9 @@
-import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, BaseEntity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 import { ObjectType, Field, ID } from "type-graphql";
+import { User } from "./User";
 
-@Entity()
 @ObjectType()
+@Entity()
 export class Book extends BaseEntity {
   @Field(() => ID)
   @PrimaryGeneratedColumn()
@@ -19,4 +20,9 @@ export class Book extends BaseEntity {
   @Field(() => Boolean)
   @Column({ default: false })
   isPublished: boolean;
+
+
+  @Field(() => User)
+  @ManyToOne(()=> User,(user)=>user.books,{eager:true})
+  orderBy: User;
 }
